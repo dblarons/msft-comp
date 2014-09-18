@@ -9,5 +9,5 @@ for thing in contents:
 	newcontents.append(url+thing)
 
 for thing in newcontents:
-	print requests.get(thing)
+	print requests.get(thing).text
 
