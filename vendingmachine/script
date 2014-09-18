@@ -1,0 +1,36 @@
+f = open('PracticeInput.txt','rU')
+contents = filter(None, f.read().split('\n'))
+
+newcontents = []
+
+for thing in contents:
+	stuff = thing.split(',')
+	newcontents.append([stuff[0], stuff[1:]])
+
+actionies = []
+inventory = {}
+change = {}
+
+for item in newcontents:
+	if (item[0] == 'Actions'): 
+		actionies+= item[1]
+		newcontents.remove(item)
+	elif (item[0][0] == '$'):
+		change[item[1][0]] = item[1][1]
+	else:
+		inventory[item[0]] = item[1]
+
+liter = ''
+realactions =[]
+for somechar in list(''.join(actionies)):
+  if somechar.isalpha():
+	realactions.append(liter)
+	liter = somechar
+  else:
+	liter += somechar
+
+actualactions = []
+for thingie in realactions:
+	actualactions.append(thingie.split('$'))
+
+actualactions = filter(None, actualactions)

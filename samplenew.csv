@@ -1,3 +1,20 @@
+startswith(ProductName, 'Louisiana')
+UnitsOnOrder gt 9 and not (CategoryID eq 1)
+Discontinued ne true and CategoryID eq 3
+substringof('tofu', QuantityPerUnit) or substringof('Tofu', QuantityPerUnit)
+CategoryID ge 5
+Discontinued or UnitsInStock lt 5
+UnitsInStock lt 7 and SupplierID eq 2
+ReorderLevel lt 10 and (SupplierID eq 1 or SupplierID eq 3)
+substringof('Hot', ProductName)
+CategoryID eq 7
+substringof('pp', ProductName) or substringof('cc', ProductName)
+UnitsOnOrder ge 50
+UnitsOnOrder gt 9 and not (CategoryID eq 1)
+Discontinued ne true and CategoryID eq 3
+substringof('''', ProductName)
+Discontinued ne true and CategoryID eq 3
+substringof('oz', QuantityPerUnit) or substringof('lb', QuantityPerUnit)
 Discontinued ne true and CategoryID eq 3
 25 eq ReorderLevel
 substringof('pkg', QuantityPerUnit) and substringof(' - ', QuantityPerUnit)
@@ -8,18 +25,3 @@ UnitsInStock lt 4 and SupplierID eq 3
 not Discontinued and UnitsInStock lt 10
 substringof('Dried', ProductName) or substringof('dried', ProductName)
 CategoryID eq 7
-Discontinued eq true
-SupplierID eq 4
-CategoryID eq 2
-substringof('bottle', QuantityPerUnit)
-startswith(ProductName, 'Louisiana')
-UnitsInStock lt 20 and SupplierID eq 1
-ReorderLevel lt 10 and (SupplierID eq 1 or SupplierID eq 3)
-SupplierID eq 2
-Discontinued ne true
-substringof('jar', QuantityPerUnit) or substringof('can', QuantityPerUnit)
-CategoryID le 3 or SupplierID ge 4
-2 ge SupplierID or UnitsOnOrder ge 100
-UnitsOnOrder ge 100
-Discontinued and SupplierID eq 1 and substringof('a', ProductName)
-SupplierID eq 2 or substringof('ml', QuantityPerUnit)
